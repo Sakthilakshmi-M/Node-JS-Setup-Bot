@@ -1,0 +1,122 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="681.333333333333,1188.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="32">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.PDF.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="32">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="476,1124" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="text" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ReadPDFText DisplayName="Read PDF Text" FileName="C:\Users\sakth\Downloads\server.pdf" sap:VirtualizedContainerService.HintSize="434,82.6666666666667" sap2010:WorkflowViewState.IdRef="ReadPDFText_1" PreserveFormatting="True" Range="All" Text="[text]" />
+    <Assign sap:VirtualizedContainerService.HintSize="434,62" sap2010:WorkflowViewState.IdRef="Assign_3">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[text]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[text.Replace(Environment.NewLine+Environment.NewLine,Environment.NewLine)]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: asdf - Visual Studio Code" sap:VirtualizedContainerService.HintSize="434,807.333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="18bfdd84-e7be-4a9a-9739-bdbcc382c5d6" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,512.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ClickType="Single" DisplayName="Click 'code.exe asdf'" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="18bfdd84-e7be-4a9a-9739-bdbcc382c5d6" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="165, 539, 178, 32" FriendlyName="'code.exe asdf'" Guid="edd830d2-24bc-435d-831a-7b76bf84f188" ImageBase64="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" InformativeScreenshot="813a4ad621563c62eb36191970cd75c5.png" ScopeSelectorArgument="&lt;wnd app='code.exe' cls='Chrome_WidgetWin_1' title='asdf - Visual Studio Code' /&gt;" SearchSteps="Image" TargetType="ImageBased" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'code.exe server.js'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,220" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="18bfdd84-e7be-4a9a-9739-bdbcc382c5d6" Text="[text]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="445, 135, 537, 186" FriendlyName="'code.exe server.js'" Guid="92434338-592b-4902-a515-bf98753e5264" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAhkAAAC6CAYAAAADDV/iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAA7dSURBVHhe7d3haxtnnsDx/ht3e3t+K9rQ416Ywh7Ji81CKGapCw00S7wQlxKoyzpXXEgIbnCuLtQliKCjDkV0BV1RzMLSe7Mv9+ibg4P+Bffi/ot7/dw8I400I43sxNEvaazPiw930Yxk2Zqd+eqZZ6avra2tJbgI3njjDQB+RkQGF0bbBg7AyyMyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIuOF6aSNdzZSp3UZAFw8IuMF2bjfTycnJ6m/f11oALASRMaL0rme9r85ERoArIyXFxnvHqRBccA96e60L/9Z2kwH3+ZQ6Kad1uVnEBqrp7Odjr4rPvPv+2n/3ZblABeYyHgmzxkZ2SQ0hun4Xlxo/Oqtf0z/+ZdflP709S/mll9/55fl4//zX39fyuvduf3LufV4TiIDWGEi45ksITKyIjTuPhmGhkaOiP/7378r5YioLzt68A+TZbPysvq6AHBeIuOZLCkysuDQWBQZeYSjHhXV8vq/83PrrwUA5yEynskSIyOrhUbvk+Ve3rooMuqjGLOP51MmOUKqxwDgebyWJyGeDPupd38rXWlZYa1zNd349Cgdf5sPhvkAW/h+kI6/3E0bnZb1S5fS5kcHqdevPacw7B+lnd+M11kUGcWB96A/Wn/w1e2593Tpnd109GQwfd3yvW+nq7Pvpf76xe+w/aCXBt+Pn1O8/96DludU3txMu18ep8GwWn+Y+o/309blJUdG1tlIe73lh8aiyMjzMKrH2+ZqLE+xDdyZ2W6GxXbzcDutz66bP5/7vdSv/t6FwZOjtPvOpeZ6hZ1uXj5IB++upSu/P0jHeb5DsX73o2vjuS6DdPh+8zmV9U+OR6/9+Y3G451fb6f9x/00rG0fefvefLP5/OY2tZF2H423w/5+2qiv17B4m5n7uYVhv5d2zd0ALojXuo+Lg+l4Jzcsdp6zB/XNB+Md6eA49R51U7fQK3eaha/35sNk8u28WJ531o9Hz+k+Kg4i39Umv7VGxpXiIDJ67vx76aSNT3pp2HjdXjoejN7L3PqT1z8YHXyKn12+//rv+9X2/EH98k7qjg9c09+5eO/5OcPj4qCZly0xMrI3x5MDvz1Im23Lz2FRZOTJndXjWR7BWP7oxfRzbPwNc0TM/o6Xt9LhOCpPigNsua30RvcUOTnpp4P3OrXXrUXGx/upX64z0v14LV291x4RI+tp7+vRa+6/PX38yu8PJ6/T7+X3WWzfk/dzkK7XQ3SyTe2lnUe1eDr1c2uPjM57B/M/dxzP+XdpvgbAq2l0uiQfWMtvkcN09EFzp77x6WE6uHV15mB8rQiJvP7oG+X08U7a/mocCb29U0Y6CnORcSVtfTE6uLQ+t1q/f5i2LteXVQe0YbFzXp9fP79ed7cxajHdwR+nvbemj+fXGh2Iih3/wxvp0uTxwmTEIS+PGMkofuaD5c3NWBQZWf53PTSyPKqxtNh4/3D0t5+L0Etp89ZWujr59/rks5sdxZl8RjMH8Coy+t8MU/+L7XStPtrw1l46zs8ZHKYbteeUfnN3tOzJ3enPf2u83Q97aW+jvt130vUHo21x8GBz+ni1TX3TL4KpeM5760/xebVFxnra7eXHBunwZvN/b3l0Y8tIBnBBTOZkdD48KkcJ8rf7+gqLVCMcjW9db4+/XRY7+a3TAiNrRMZ0pz737bHUmRxcZnfKpernFq812elPIqMIiUaUZNXr5WH22uOTg8h+utZYf+zy+CC2rMgICozstMjIMdEWGtlSLmP9uFv+TsMvttqXV6q/d9uIWPEZ3S6DtRmy1efW/hnVDt4zp0yqUY7enWmIVtvw8SdXGuuWOrfT0ezIy2SbKmL8w5btsFVbZFSPzUYuwMUynfjZ2U29vANtG/p981ra+mgvHXw5GtIdVqcTCvVvetWO/Pje1ebz29Qi40pxUCpPg7QGRlZ848zLi/d2fW5Zc/ncAWHB+fK2SDr7/S8+v/7MAgMjOy0yKtV9MuqRkT33ZazVqMFJPx1+cK05IlSzsT8Ky94f2g/YbZ9RFRnHn9RGrWrW7/TK5c1TJtV8jeJzm2xfG2m/PC3SS7ut21zLZ11tU98VEd1Y9zTt28z2l6PPPo/aXV9/2mABeLXUri5pOVAX3yYn8yCy74dFYIznNoznXdQjY+uL0WON0YFFqh32YDDecXfT7bkRh7HJQessLQeEyemYprYD2Nnvf0mRUQ+M2dMyS/I0kVHJoxezsfG8p04m4Zh9X2wzD3bmJlJWp9bO0t/fmDxnFBnDdHiz+VoTnfF2XD9lMh7pGn51uxZz26ORitrPaddP+78dP6fapr7em5+8utCCbaYzvftrlie67v1u9rQkwKvt9Miozq0Puml35vxzdZCuR8bOo7zDzPM6pustNNlhF8FS7uzznIqWYevst+PTIUXgjCaRLnJ3emA5R2SceQBbRmS8gMDIzoqM2Yior7+MyMg669fTzufNq3qOPpx+xqPtpdiGxhMfFzn4aDqyNPqMZucC1U1Ps1SnTK6V/3G62c91vL3nK41afubUwdlXRJ3qtG3mUrp2cy91a1dhDb++u2A0D+DVM42M6kBe+5Y2+mbfHg1tkVE9tmgou6G2w55OxGwehKamAdR+uqTFOSKjemzR8P3a2lY6LE8VnTMy6oHxxYJLhs8pn+Koz6eo3w8j3/+iejzHRP737CmRHBX1yMjr1Zc/n0tp89NqRKyXdsfzEM7+e887OzKm84tGp0zGB/m5yaDVwX/R6ZIWS4+MqTzh83A8stF+dQzAq2cSGaNve8XB7/61ycLFO/TqHHczMtZuHo4OJE/utk+crJvZYV96vwqN+csW19aujq9maV5+eKpzREZnPGHxpLfbOhzeKX6/8jXPExlBgVGfxJn/bxUb9dMfVVDMXr5a/fdKsvz/15fN/pznV40w1E5HfVBNNq6fxjjd00TGJAZzWIy3g/p2XRmdrnmGSZyBkVGqJjCfet8NgFdHGRmTA/yw2BHWZrtXcxQGD+sTEztp49Pjyfn2RmRMLm1tO5BeSjfuH6W71cGhZYc9OY+f/2NSM6GxXpscemP2JknlzbZqr52dIzLK/5hVdermDzPnx+v3czhHZGzcG0fckkcwstn5FLPqpz7qIxyLzI5yPLN3t9L2r2cP3NXlwfVAqA7ALX/vQr7xWvdh8/N7ushYSzc+z5/vIHUf5b/7cbpbnfKoq7aRYrvfnXu/+WZi+VRN7bGzIuPt3dTL208jstsi42raurU5d6psErHF6z9tdAH8nL1W3QCo3NHPzol4d/zNqjB4MrpR0uhGRf3UfTx6XjMyCvWbWeUJf+V57eqmWbWDQ+sOu3Yp69yO/8r0Bkj5DpzVefzJzbVqE/Sy80RGYb34dl0+L6tuDjX+GcPuQTp82m+lc66k23fm72C6DPXRjFltpz1yRCxafyl3AR2PCOW7V1ZzG6obXM3eNK3zXrGNVXM26jd8q4Lu0fkiYzKfKFswMlVub+MrXLJqG5/cfK14rPUS5wXb1D+Pr2xpjri1Rcb4sfrN6mrb8fxIHsCrqbyt+KJbOGeX3t9r3B582C8O/sW61UF6LjKyNzfTzoPmbaKH3x6nozu1b28Ld9jTm3KVIyuNK05ablVdBsfh3MTU80ZG1n7r8jwC8QxD3y9BDorqdEnWtk7d7PrLmOxZurZT/v0at8ue/fxrWm+vXazfvT9zs63CU0fG5LPKn/FpB+1Ounprv7GN521q8KSb9mcvvz1jm1p7+246zr/DmSMZ62nrXr4D7sx2/Hi/ZQQI4NVVu7oEWL6fd5gCRBIZEKm61Xn9duYAK0JkQJhOuv5wdNqt7eoWgItOZMBS7aTueAJr75vxnIuFt8sHuNhEBizVdjosr6QaT+Z8tDt3O3WAVSEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEygnQ6HQBYaSIjSNsfGwBWicgI0vbHBoBVIjKC1P/IbcsB4KITGUFEBgCrTmQEERkArDqREURkALDqREYQkQHAqhMZQUQGAKvupUXG67/aTv/23V/Tj//9U/rpp5/Sj09utq73qhIZAKy6FxwZr6d/ufVZ+uN//FiGRZ3IAICL5YVGxvrDH6Zh8bcf0r//azf9IDIA4EJ6sSMZr99Lw7/9Nf1x/2b6p/Kxz9KfRQYAXEgveeKnyACAi0pkBBEZAKw6kRFEZACw6kRGEJEBwKoTGUFEBgCrTmQEERkArDqREURkALDqREYQkQHAqhMZQUQGAKtOZAQRGQCsuhccGdOoON2f02etz391iAwAVp3ICCIyAFh1L/l0ycUlMgBYdSIjiMgAYNWJjCAiA4BVJzKCiAwAVp3ICCIyAFh1IiOIyABg1YmMIPXIAIBVJDKCtP2xAWCViIwgbX9sAFglIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAQIgMACCEyAIAAa+n/ATL47JKifWczAAAAAElFTkSuQmCC" InformativeScreenshot="2bf3aaea7748e17e59e70db592f088d7.png" ScopeSelectorArgument="&lt;wnd app='code.exe' cls='Chrome_WidgetWin_1' title='server.js - asdf - Visual Studio Code' /&gt;" SearchSteps="Image" TargetType="ImageBased" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-11, -11, 1942, 1030" FilePath="C:\Users\sakth\AppData\Local\Programs\Microsoft VS Code\code.exe" IconBase64="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" InformativeScreenshot="a436c638e56518d71b5015c062156f6d.png" Selector="&lt;wnd app='code.exe' cls='Chrome_WidgetWin_1' title='asdf - Visual Studio Code'/&gt;" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
